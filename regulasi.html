@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulation Center — ASPHIRASI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f3ebdd; }
+  a { -webkit-tap-highlight-color: transparent; }
+  .ed-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .ed-link { transition: color .2s ease; }
+  .ed-link:hover { color: #7a1f1f !important; }
+  .ed-navlink { position: relative; padding-bottom: 4px; }
+  .ed-navlink::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: #b88a2e; transition: width .28s ease; }
+  .ed-navlink:hover::after { width: 100%; }
+  .ed-reg { transition: background .25s ease, border-color .25s ease, transform .25s ease; }
+  .ed-reg:hover { background: rgba(199,154,62,.10) !important; border-color: rgba(199,154,62,.55) !important; transform: translateY(-4px); }
+  .doc-row { transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease, border-color .3s ease; }
+  .doc-row:hover { transform: translateX(5px); box-shadow: 0 14px 30px rgba(58,18,18,.10); border-color: #c79a3e; }
+  .doc-row:hover .dl-ic { background: #2c0a0a; }
+  .dl-ic { transition: background .25s ease; }
+  .ed-btn { transition: filter .2s ease; }
+  .ed-btn:hover { filter: brightness(1.06); }
+  .will-reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+  .will-reveal.in { opacity: 1; transform: none; }
+  @media (max-width: 900px) {
+    .reg-4 { grid-template-columns: 1fr 1fr !important; }
+    .reg-tl { grid-template-columns: 1fr 1fr !important; }
+    .doc-row { flex-wrap: wrap !important; }
+    .ed-mast-nav { flex-wrap: wrap !important; gap: 14px !important; }
+  }
+  @media (max-width: 600px){
+    .ut-bar{ flex-wrap: wrap; gap: 5px 12px; font-size: 11px; }
+    .mh-logo{ gap: 10px !important; }
+    .mh-logo > span:not(.mh-word){ display: none !important; }
+    .mh-word{ font-size: 30px !important; letter-spacing: 2px !important; }
+    .ed-mast-nav{ gap: 12px 16px !important; }
+    .reg-4{ grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true">
+  <defs>
+    <pattern id="girihPat" width="54" height="54" patternUnits="userSpaceOnUse"><g fill="none" stroke="#c79a3e" stroke-width="1"><rect x="11" y="11" width="32" height="32"></rect><rect x="11" y="11" width="32" height="32" transform="rotate(45 27 27)"></rect></g></pattern>
+  </defs>
+</svg>
+
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #2a1f17; background: #f3ebdd; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- utility bar -->
+  <div style="background: #2c0a0a; color: #c2a989; font-size: 12px;">
+    <div class="ut-bar" style="max-width: 1180px; margin: 0 auto; padding: 9px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <svg width="13" height="13" viewBox="0 0 40 40" fill="none" stroke="#c79a3e" stroke-width="2.4"><rect x="9" y="9" width="22" height="22"></rect><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"></rect></svg>
+        <span>Sabtu, 14 Juni 2026</span><span style="color: #6e4a3a;">|</span><span style="color: #d8ad4a;">28 Dzulhijjah 1447 H</span>
+      </div>
+      <a href="index.html" class="ed-link" style="text-decoration: none; color: #e7c873; font-weight: 600;">← Kembali ke Beranda</a>
+    </div>
+  </div>
+
+  <!-- masthead -->
+  <div style="background: #f3ebdd; border-bottom: 1px solid #d8c5a6;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 22px 28px 0; text-align: center;">
+      <a class="mh-logo" href="index.html" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 18px;">
+        <span style="width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #c79a3e);"></span>
+        <svg width="18" height="18" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.6"><rect x="8" y="8" width="24" height="24"></rect><rect x="8" y="8" width="24" height="24" transform="rotate(45 20 20)"></rect></svg>
+        <span class="mh-word" style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(34px, 5vw, 54px); letter-spacing: 6px; color: #2c0a0a;">ASPHIRASI</span>
+        <svg width="18" height="18" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.6"><rect x="8" y="8" width="24" height="24"></rect><rect x="8" y="8" width="24" height="24" transform="rotate(45 20 20)"></rect></svg>
+        <span style="width: 120px; height: 1px; background: linear-gradient(270deg, transparent, #c79a3e);"></span>
+      </a>
+      <nav class="ed-mast-nav" style="display: flex; align-items: center; justify-content: center; gap: 32px; margin-top: 18px; border-top: 1px solid #d8c5a6; border-bottom: 2px solid #2c0a0a; padding: 12px 0;">
+        <a href="index.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">BERANDA</a>
+        <a href="index.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">INSIGHT</a>
+        <a href="podcast.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">PODCAST</a>
+        <a href="regulasi.html" class="ed-navlink" style="text-decoration: none; color: #2c0a0a; font-weight: 700; font-size: 13px; letter-spacing: .5px;">REGULASI</a>
+        <a href="agenda.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">AGENDA</a>
+        <a href="#" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">TENTANG KAMI</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- hero + categories -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 34px 28px 0;">
+    <div style="position: relative; border-radius: 16px; overflow: hidden; background: radial-gradient(120% 140% at 100% 0%, #4a1414 0%, #2c0a0a 55%, #1a0606 100%); padding: 44px 40px;">
+      <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .08; pointer-events: none;"><rect width="100%" height="100%" fill="url(#girihPat)"></rect></svg>
+      <div style="position: relative; text-align: center; margin-bottom: 32px;">
+        <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+          <svg width="18" height="18" viewBox="0 0 40 40" fill="none" stroke="#e0b75a" stroke-width="1.8"><rect x="9" y="9" width="22" height="22"></rect><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"></rect></svg>
+          <span style="font-size: 11px; letter-spacing: 3.5px; color: #e0b75a; font-weight: 600;">PUSAT REGULASI INDUSTRI</span>
+        </div>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(38px, 4.6vw, 58px); color: #f7eeda; margin: 0; line-height: 1;">Regulation Center</h1>
+        <p style="font-size: 14.5px; color: #c2a989; max-width: 620px; margin: 14px auto 0; line-height: 1.6;">Satu pintu untuk seluruh kebijakan, peraturan, dan panduan resmi industri haji &amp; umrah — dari Kemenag RI, Pemerintah Saudi, hingga ketentuan asosiasi.</p>
+      </div>
+      <div class="reg-4" style="position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;">
+        <div class="ed-reg" style="border: 1px solid rgba(199,154,62,.3); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; cursor: pointer;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c79a3e" stroke-width="1.5"><path d="M12 3l8 5v3H4V8l8-5z"></path><path d="M6 11v6M10 11v6M14 11v6M18 11v6M4 20h16"></path></svg>
+          <div style="font-weight: 700; font-size: 14.5px; color: #f7eeda;">KEMENAG RI</div>
+          <div style="font-size: 12px; color: #c2a989; line-height: 1.45;">Regulasi &amp; Kebijakan Kementerian Agama</div>
+          <div style="font-size: 11px; color: #e0b75a; font-weight: 600; margin-top: 2px;">24 dokumen →</div>
+        </div>
+        <div class="ed-reg" style="border: 1px solid rgba(199,154,62,.3); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; cursor: pointer;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c79a3e" stroke-width="1.5"><path d="M12 2v6M9 5h6M12 8c-3 2-5 5-5 9h10c0-4-2-7-5-9z"></path><path d="M5 21h14"></path></svg>
+          <div style="font-weight: 700; font-size: 14.5px; color: #f7eeda;">PEMERINTAH SAUDI</div>
+          <div style="font-size: 12px; color: #c2a989; line-height: 1.45;">Regulasi &amp; Kebijakan Pemerintah Saudi</div>
+          <div style="font-size: 11px; color: #e0b75a; font-weight: 600; margin-top: 2px;">18 dokumen →</div>
+        </div>
+        <div class="ed-reg" style="border: 1px solid rgba(199,154,62,.3); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; cursor: pointer;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c79a3e" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"></rect><circle cx="12" cy="10" r="2.5"></circle><path d="M8 16h8"></path></svg>
+          <div style="font-weight: 700; font-size: 14.5px; color: #f7eeda;">VISA &amp; TASREH</div>
+          <div style="font-size: 12px; color: #c2a989; line-height: 1.45;">Informasi Visa, Tasreh &amp; Perizinan</div>
+          <div style="font-size: 11px; color: #e0b75a; font-weight: 600; margin-top: 2px;">12 dokumen →</div>
+        </div>
+        <div class="ed-reg" style="border: 1px solid rgba(199,154,62,.3); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 12px; cursor: pointer;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c79a3e" stroke-width="1.5"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M15 20c0-2 .5-3.5 1.5-4.5"></path></svg>
+          <div style="font-weight: 700; font-size: 14.5px; color: #f7eeda;">PMA &amp; PERIZINAN</div>
+          <div style="font-size: 12px; color: #c2a989; line-height: 1.45;">Panduan &amp; Ketentuan Perizinan Travel</div>
+          <div style="font-size: 11px; color: #e0b75a; font-weight: 600; margin-top: 2px;">9 dokumen →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- documents list -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 40px 28px 8px;">
+    <div style="border-bottom: 1px solid #d8c5a6; padding-bottom: 12px; margin-bottom: 24px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <svg width="20" height="20" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.8"><rect x="9" y="9" width="22" height="22"></rect><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"></rect></svg>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 30px; color: #2c0a0a; margin: 0; line-height: 1;">Dokumen Terbaru</h2>
+      </div>
+      <span style="font-size: 12.5px; color: #8a7a64;">Diperbarui 2 Mei 2025</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="doc-row will-reveal" style="display: flex; align-items: center; gap: 20px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 18px 22px;">
+        <div style="flex: 0 0 46px; height: 46px; background: #f3e7d4; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1f1f" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></div>
+        <div style="flex: 1; min-width: 200px;"><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 21px; color: #2c0a0a; margin: 0 0 6px;">Pembaruan Ketentuan Tasreh 2025</h3><div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #fff; background: #2f7a4f; padding: 3px 8px; border-radius: 3px;">KEMENAG RI</span><span style="font-size: 12px; color: #8a7a64;">2 Mei 2025 · PDF · 1.2 MB</span></div></div>
+        <button class="dl-ic" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: #b88a2e; color: #fff; border: none; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 11px 18px; border-radius: 8px; cursor: pointer;">Unduh <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"></path></svg></button>
+      </div>
+      <div class="doc-row will-reveal" style="display: flex; align-items: center; gap: 20px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 18px 22px;">
+        <div style="flex: 0 0 46px; height: 46px; background: #f3e7d4; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1f1f" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></div>
+        <div style="flex: 1; min-width: 200px;"><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 21px; color: #2c0a0a; margin: 0 0 6px;">Surat Edaran Kuota Umrah 2025</h3><div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #fff; background: #2f7a4f; padding: 3px 8px; border-radius: 3px;">KEMENAG RI</span><span style="font-size: 12px; color: #8a7a64;">28 Apr 2025 · PDF · 840 KB</span></div></div>
+        <button class="dl-ic" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: #b88a2e; color: #fff; border: none; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 11px 18px; border-radius: 8px; cursor: pointer;">Unduh <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"></path></svg></button>
+      </div>
+      <div class="doc-row will-reveal" style="display: flex; align-items: center; gap: 20px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 18px 22px;">
+        <div style="flex: 0 0 46px; height: 46px; background: #f3e7d4; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1f1f" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></div>
+        <div style="flex: 1; min-width: 200px;"><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 21px; color: #2c0a0a; margin: 0 0 6px;">Ketentuan Visa Umrah Terbaru</h3><div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #fff; background: #6b4ca6; padding: 3px 8px; border-radius: 3px;">PEMERINTAH SAUDI</span><span style="font-size: 12px; color: #8a7a64;">25 Apr 2025 · PDF · 2.1 MB</span></div></div>
+        <button class="dl-ic" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: #b88a2e; color: #fff; border: none; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 11px 18px; border-radius: 8px; cursor: pointer;">Unduh <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"></path></svg></button>
+      </div>
+      <div class="doc-row will-reveal" style="display: flex; align-items: center; gap: 20px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 18px 22px;">
+        <div style="flex: 0 0 46px; height: 46px; background: #f3e7d4; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1f1f" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></div>
+        <div style="flex: 1; min-width: 200px;"><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 21px; color: #2c0a0a; margin: 0 0 6px;">Standar Layanan Minimum Penyelenggara</h3><div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #fff; background: #7a1f1f; padding: 3px 8px; border-radius: 3px;">ASPHIRASI</span><span style="font-size: 12px; color: #8a7a64;">20 Apr 2025 · PDF · 560 KB</span></div></div>
+        <button class="dl-ic" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: #b88a2e; color: #fff; border: none; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 11px 18px; border-radius: 8px; cursor: pointer;">Unduh <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"></path></svg></button>
+      </div>
+      <div class="doc-row will-reveal" style="display: flex; align-items: center; gap: 20px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 18px 22px;">
+        <div style="flex: 0 0 46px; height: 46px; background: #f3e7d4; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1f1f" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg></div>
+        <div style="flex: 1; min-width: 200px;"><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 21px; color: #2c0a0a; margin: 0 0 6px;">Panduan Perizinan PPIU 2025</h3><div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;"><span style="font-size: 10px; font-weight: 700; letter-spacing: .5px; color: #fff; background: #2f7a4f; padding: 3px 8px; border-radius: 3px;">KEMENAG RI</span><span style="font-size: 12px; color: #8a7a64;">15 Apr 2025 · PDF · 1.6 MB</span></div></div>
+        <button class="dl-ic" style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; background: #b88a2e; color: #fff; border: none; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 11px 18px; border-radius: 8px; cursor: pointer;">Unduh <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"></path></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- timeline -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 42px 28px 8px;">
+    <div style="border-bottom: 1px solid #d8c5a6; padding-bottom: 12px; margin-bottom: 34px; display: flex; align-items: center; gap: 12px;">
+      <svg width="20" height="20" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.8"><rect x="9" y="9" width="22" height="22"></rect><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"></rect></svg>
+      <div><h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 30px; color: #2c0a0a; margin: 0; line-height: 1;">Lini Masa Kebijakan</h2><div style="font-size: 12px; color: #8a7a64; margin-top: 4px;">Perkembangan regulasi terbaru</div></div>
+    </div>
+    <div style="position: relative;">
+      <div style="position: absolute; top: 9px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, #e3d6c0, #c79a3e 50%, #e3d6c0);"></div>
+      <div class="reg-tl" style="position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;">
+        <div class="will-reveal" style="text-align: center; padding: 0 6px;">
+          <div style="width: 20px; height: 20px; margin: 0 auto 16px; background: #f3ebdd; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 40 40" fill="#b88a2e"><rect x="11" y="11" width="18" height="18"></rect><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"></rect></svg></div>
+          <div style="font-weight: 700; font-size: 12px; letter-spacing: .5px; color: #7a1f1f;">12 APR 2025</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20px; color: #2c0a0a; margin: 6px 0; line-height: 1.15;">Draf Tasreh Direvisi</div>
+          <div style="font-size: 12px; color: #6a5a48; line-height: 1.5;">Otoritas Saudi mengajukan revisi prosedur Tasreh.</div>
+        </div>
+        <div class="will-reveal" style="text-align: center; padding: 0 6px;">
+          <div style="width: 20px; height: 20px; margin: 0 auto 16px; background: #f3ebdd; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 40 40" fill="#b88a2e"><rect x="11" y="11" width="18" height="18"></rect><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"></rect></svg></div>
+          <div style="font-weight: 700; font-size: 12px; letter-spacing: .5px; color: #7a1f1f;">25 APR 2025</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20px; color: #2c0a0a; margin: 6px 0; line-height: 1.15;">Konsultasi Publik Kemenag</div>
+          <div style="font-size: 12px; color: #6a5a48; line-height: 1.5;">Kemenag membuka masukan dari asosiasi &amp; travel.</div>
+        </div>
+        <div class="will-reveal" style="text-align: center; padding: 0 6px;">
+          <div style="width: 20px; height: 20px; margin: 0 auto 16px; background: #f3ebdd; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 40 40" fill="#7a1f1f"><rect x="11" y="11" width="18" height="18"></rect><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"></rect></svg></div>
+          <div style="font-weight: 700; font-size: 12px; letter-spacing: .5px; color: #7a1f1f;">2 MEI 2025</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20px; color: #2c0a0a; margin: 6px 0; line-height: 1.15;">Tasreh 2025 Resmi Berlaku</div>
+          <div style="font-size: 12px; color: #6a5a48; line-height: 1.5;">Aturan baru efektif; travel wajib menyesuaikan.</div>
+        </div>
+        <div class="will-reveal" style="text-align: center; padding: 0 6px;">
+          <div style="width: 20px; height: 20px; margin: 0 auto 16px; background: #f3ebdd; display: flex; align-items: center; justify-content: center;"><svg width="18" height="18" viewBox="0 0 40 40" fill="#b88a2e"><rect x="11" y="11" width="18" height="18"></rect><rect x="11" y="11" width="18" height="18" transform="rotate(45 20 20)"></rect></svg></div>
+          <div style="font-weight: 700; font-size: 12px; letter-spacing: .5px; color: #7a1f1f;">1 JUN 2025</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20px; color: #2c0a0a; margin: 6px 0; line-height: 1.15;">Aturan Visa Baru Efektif</div>
+          <div style="font-size: 12px; color: #6a5a48; line-height: 1.5;">Ketentuan visa umrah yang diperbarui berlaku penuh.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer style="position: relative; background: linear-gradient(180deg, #260909 0%, #120303 100%); border-top: 3px solid #b88a2e; overflow: hidden; margin-top: 48px;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .05; pointer-events: none;"><rect width="100%" height="100%" fill="url(#girihPat)"></rect></svg>
+    <div style="position: relative; max-width: 1180px; margin: 0 auto; padding: 40px 28px; text-align: center;">
+      <div style="display: inline-flex; align-items: center; gap: 16px;">
+        <span style="width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #c79a3e);"></span>
+        <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; letter-spacing: 4px; color: #f4ead2;">ASPHIRASI</div>
+        <span style="width: 120px; height: 1px; background: linear-gradient(270deg, transparent, #c79a3e);"></span>
+      </div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: #c79a3e; margin: 6px 0 18px;">Voice of the Haramain Industry</div>
+      <a href="index.html" class="ed-link" style="text-decoration: none; color: #e7c873; font-weight: 600; font-size: 13px;">← Kembali ke Beranda</a>
+      <div style="font-size: 12px; color: #8a755e; margin-top: 20px;">© 2025 ASPHIRASI Media. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  function ready(fn){ if(document.readyState!=='loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  ready(function(){
+    if (!('IntersectionObserver' in window)) return;
+    var els = Array.prototype.slice.call(document.querySelectorAll('.will-reveal'));
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { io.unobserve(e.target); e.target.classList.add('in'); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  });
+})();
+</script>
+</body>
+</html>

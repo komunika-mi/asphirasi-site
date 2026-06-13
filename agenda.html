@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda &amp; Event — ASPHIRASI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #f3ebdd; }
+  a { -webkit-tap-highlight-color: transparent; }
+  .ed-link { transition: color .2s ease; }
+  .ed-link:hover { color: #7a1f1f !important; }
+  .ed-navlink { position: relative; padding-bottom: 4px; }
+  .ed-navlink::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: #b88a2e; transition: width .28s ease; }
+  .ed-navlink:hover::after { width: 100%; }
+  .ev-row { transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease, border-color .3s ease; }
+  .ev-row:hover { transform: translateX(5px); box-shadow: 0 14px 30px rgba(58,18,18,.10); border-color: #c79a3e; }
+  .ed-btn { transition: filter .2s ease, transform .2s ease; }
+  .ed-btn:hover { filter: brightness(1.06); }
+  .ed-btn-o:hover { background: #2c0a0a; color: #f4ead2; }
+  .ed-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .mihrab { clip-path: url(#mihrab); }
+  .ed-photo { position: relative; }
+  .ed-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(199,154,62,.10), rgba(44,10,10,.22)); mix-blend-mode: multiply; pointer-events: none; }
+  .will-reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
+  .will-reveal.in { opacity: 1; transform: none; }
+  @media (max-width: 900px) {
+    .ag-feat { grid-template-columns: 1fr !important; }
+    .ev-row { flex-wrap: wrap !important; }
+    .ed-mast-nav { flex-wrap: wrap !important; gap: 14px !important; }
+  }
+  @media (max-width: 600px){
+    .ut-bar{ flex-wrap: wrap; gap: 5px 12px; font-size: 11px; }
+    .mh-logo{ gap: 10px !important; }
+    .mh-logo > span:not(.mh-word){ display: none !important; }
+    .mh-word{ font-size: 30px !important; letter-spacing: 2px !important; }
+    .ed-mast-nav{ gap: 12px 16px !important; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true">
+  <defs>
+    <clipPath id="mihrab" clipPathUnits="objectBoundingBox"><path d="M0,1 L0,0.30 C0,0.12 0.14,0.05 0.30,0.045 C0.42,0.04 0.5,0 0.5,0 C0.5,0 0.58,0.04 0.70,0.045 C0.86,0.05 1,0.12 1,0.30 L1,1 Z"></path></clipPath>
+    <pattern id="girihPat" width="54" height="54" patternUnits="userSpaceOnUse"><g fill="none" stroke="#c79a3e" stroke-width="1"><rect x="11" y="11" width="32" height="32"></rect><rect x="11" y="11" width="32" height="32" transform="rotate(45 27 27)"></rect></g></pattern>
+  </defs>
+</svg>
+
+<div style="font-family: 'Plus Jakarta Sans', sans-serif; color: #2a1f17; background: #f3ebdd; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- utility bar -->
+  <div style="background: #2c0a0a; color: #c2a989; font-size: 12px;">
+    <div class="ut-bar" style="max-width: 1180px; margin: 0 auto; padding: 9px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <svg width="13" height="13" viewBox="0 0 40 40" fill="none" stroke="#c79a3e" stroke-width="2.4"><rect x="9" y="9" width="22" height="22"></rect><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"></rect></svg>
+        <span>Sabtu, 14 Juni 2026</span><span style="color: #6e4a3a;">|</span><span style="color: #d8ad4a;">28 Dzulhijjah 1447 H</span>
+      </div>
+      <a href="index.html" class="ed-link" style="text-decoration: none; color: #e7c873; font-weight: 600;">← Kembali ke Beranda</a>
+    </div>
+  </div>
+
+  <!-- masthead -->
+  <div style="background: #f3ebdd; border-bottom: 1px solid #d8c5a6;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 22px 28px 0; text-align: center;">
+      <a class="mh-logo" href="index.html" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 18px;">
+        <span style="width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #c79a3e);"></span>
+        <svg width="18" height="18" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.6"><rect x="8" y="8" width="24" height="24"></rect><rect x="8" y="8" width="24" height="24" transform="rotate(45 20 20)"></rect></svg>
+        <span class="mh-word" style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(34px, 5vw, 54px); letter-spacing: 6px; color: #2c0a0a;">ASPHIRASI</span>
+        <svg width="18" height="18" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.6"><rect x="8" y="8" width="24" height="24"></rect><rect x="8" y="8" width="24" height="24" transform="rotate(45 20 20)"></rect></svg>
+        <span style="width: 120px; height: 1px; background: linear-gradient(270deg, transparent, #c79a3e);"></span>
+      </a>
+      <nav class="ed-mast-nav" style="display: flex; align-items: center; justify-content: center; gap: 32px; margin-top: 18px; border-top: 1px solid #d8c5a6; border-bottom: 2px solid #2c0a0a; padding: 12px 0;">
+        <a href="index.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">BERANDA</a>
+        <a href="index.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">INSIGHT</a>
+        <a href="podcast.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">PODCAST</a>
+        <a href="regulasi.html" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">REGULASI</a>
+        <a href="agenda.html" class="ed-navlink" style="text-decoration: none; color: #2c0a0a; font-weight: 700; font-size: 13px; letter-spacing: .5px;">AGENDA</a>
+        <a href="#" class="ed-navlink" style="text-decoration: none; color: #4a3a2c; font-weight: 600; font-size: 13px; letter-spacing: .5px;">TENTANG KAMI</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- page header -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 38px 28px 0; text-align: center;">
+    <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b88a2e" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 3v4M16 3v4"></path></svg>
+      <span style="font-size: 11px; letter-spacing: 3.5px; color: #b88a2e; font-weight: 600;">JADWAL KEGIATAN ASOSIASI</span>
+    </div>
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(40px, 5vw, 64px); color: #2c0a0a; margin: 0; line-height: 1;">Agenda &amp; Event</h1>
+    <p style="font-size: 15px; color: #6a5a48; max-width: 600px; margin: 14px auto 0; line-height: 1.6;">Rakernas, webinar, pelatihan, hingga silaturahmi anggota — ikuti seluruh kegiatan ASPHIRASI dan kembangkan jejaring industri Anda.</p>
+  </section>
+
+  <!-- featured event -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 34px 28px 0;">
+    <div class="ag-feat" style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; border: 1px solid #e3d6c0; border-radius: 14px; overflow: hidden; background: #fffdf8; box-shadow: 0 14px 36px rgba(58,18,18,.08);">
+      <div class="ed-photo" style="position: relative; min-height: 340px; background: #1c0606;">
+        <img class="ed-img" id="ev-hero" src="assets/insight-1.png" alt="Foto event" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+        <span style="position: absolute; top: 18px; left: 18px; z-index: 2; background: #b5392c; color: #fff; font-weight: 700; font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px;">EVENT UTAMA</span>
+      </div>
+      <div style="padding: 34px; display: flex; flex-direction: column; justify-content: center;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="flex: 0 0 70px; height: 76px; background: linear-gradient(180deg,#7a1f1f,#5a1515); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f7eeda;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 30px; line-height: 1;">15</span><span style="font-size: 10px; letter-spacing: 1.5px; color: #e0b75a;">MEI</span></div>
+          <div><span style="font-size: 10.5px; letter-spacing: 1px; font-weight: 700; color: #2f7a4f;">RAKERNAS</span><h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 30px; line-height: 1.1; color: #2c0a0a; margin: 4px 0 0;">Rakernas ASPHIRASI 2025</h2></div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.7; color: #4a3a2c; margin: 18px 0 0;">Rapat Kerja Nasional tahunan: konsolidasi program, pembahasan regulasi terbaru, dan penetapan arah strategis industri haji &amp; umrah Indonesia.</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin: 18px 0 0; font-size: 13px; color: #5a4836;">
+          <span style="display: flex; align-items: center; gap: 9px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b88a2e" stroke-width="2"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Jakarta Convention Center, Jakarta</span>
+          <span style="display: flex; align-items: center; gap: 9px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b88a2e" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>09.00 WIB &ndash; Selesai</span>
+        </div>
+        <div style="display: flex; gap: 12px; margin: 24px 0 0; flex-wrap: wrap;">
+          <button class="ed-btn" style="display: flex; align-items: center; gap: 9px; background: #2c0a0a; color: #f4ead2; border: none; font-family: inherit; font-weight: 600; font-size: 13.5px; padding: 13px 24px; border-radius: 8px; cursor: pointer;">Daftar Sekarang <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#e7c873" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+          <button class="ed-btn ed-btn-o" style="display: flex; align-items: center; gap: 9px; background: none; color: #7a1f1f; border: 1.5px solid #b88a2e; font-family: inherit; font-weight: 600; font-size: 13.5px; padding: 13px 22px; border-radius: 8px; cursor: pointer; transition: background .2s, color .2s;" id="feat-cal">+ Kalender</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- upcoming list -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 40px 28px 8px;">
+    <div style="border-bottom: 1px solid #d8c5a6; padding-bottom: 12px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+      <svg width="20" height="20" viewBox="0 0 40 40" fill="none" stroke="#b88a2e" stroke-width="1.8"><rect x="9" y="9" width="22" height="22"></rect><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"></rect></svg>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 30px; color: #2c0a0a; margin: 0; line-height: 1;">Agenda Mendatang</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div class="ev-row will-reveal" style="display: flex; align-items: center; gap: 22px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 20px 24px;">
+        <div style="flex: 0 0 66px; height: 72px; background: #f3e7d4; border: 1px solid #e3d6c0; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; line-height: 1; color: #7a1f1f;">22</span><span style="font-size: 9.5px; letter-spacing: 1.5px; color: #b88a2e; font-weight: 700;">MEI</span></div>
+        <div style="flex: 1; min-width: 200px;"><span style="font-size: 10px; letter-spacing: 1px; font-weight: 700; color: #6b4ca6;">WEBINAR</span><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #2c0a0a; margin: 3px 0 6px;">Webinar Visa Umrah Terbaru</h3><div style="display: flex; gap: 16px; font-size: 12px; color: #8a7a64; flex-wrap: wrap;"><span>📍 Online Event</span><span>🕐 13.00 WIB</span></div></div>
+        <button class="ed-btn ed-btn-o" style="background: none; color: #7a1f1f; border: 1.5px solid #b88a2e; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 10px 20px; border-radius: 7px; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s;">Daftar</button>
+      </div>
+      <div class="ev-row will-reveal" style="display: flex; align-items: center; gap: 22px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 20px 24px;">
+        <div style="flex: 0 0 66px; height: 72px; background: #f3e7d4; border: 1px solid #e3d6c0; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; line-height: 1; color: #7a1f1f;">05</span><span style="font-size: 9.5px; letter-spacing: 1.5px; color: #b88a2e; font-weight: 700;">JUN</span></div>
+        <div style="flex: 1; min-width: 200px;"><span style="font-size: 10px; letter-spacing: 1px; font-weight: 700; color: #2c6e49;">PELATIHAN</span><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #2c0a0a; margin: 3px 0 6px;">Pelatihan Tour Leader Profesional</h3><div style="display: flex; gap: 16px; font-size: 12px; color: #8a7a64; flex-wrap: wrap;"><span>📍 Surabaya, Indonesia</span><span>🕐 08.00 WIB</span></div></div>
+        <button class="ed-btn ed-btn-o" style="background: none; color: #7a1f1f; border: 1.5px solid #b88a2e; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 10px 20px; border-radius: 7px; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s;">Daftar</button>
+      </div>
+      <div class="ev-row will-reveal" style="display: flex; align-items: center; gap: 22px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 20px 24px;">
+        <div style="flex: 0 0 66px; height: 72px; background: #f3e7d4; border: 1px solid #e3d6c0; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; line-height: 1; color: #7a1f1f;">18</span><span style="font-size: 9.5px; letter-spacing: 1.5px; color: #b88a2e; font-weight: 700;">JUN</span></div>
+        <div style="flex: 1; min-width: 200px;"><span style="font-size: 10px; letter-spacing: 1px; font-weight: 700; color: #b5392c;">EXPO</span><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #2c0a0a; margin: 3px 0 6px;">Business Matching Travel &amp; Maskapai</h3><div style="display: flex; gap: 16px; font-size: 12px; color: #8a7a64; flex-wrap: wrap;"><span>📍 Jakarta, Indonesia</span><span>🕐 10.00 WIB</span></div></div>
+        <button class="ed-btn ed-btn-o" style="background: none; color: #7a1f1f; border: 1.5px solid #b88a2e; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 10px 20px; border-radius: 7px; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s;">Daftar</button>
+      </div>
+      <div class="ev-row will-reveal" style="display: flex; align-items: center; gap: 22px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 20px 24px;">
+        <div style="flex: 0 0 66px; height: 72px; background: #f3e7d4; border: 1px solid #e3d6c0; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; line-height: 1; color: #7a1f1f;">02</span><span style="font-size: 9.5px; letter-spacing: 1.5px; color: #b88a2e; font-weight: 700;">JUL</span></div>
+        <div style="flex: 1; min-width: 200px;"><span style="font-size: 10px; letter-spacing: 1px; font-weight: 700; color: #5a1a1a;">GATHERING</span><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #2c0a0a; margin: 3px 0 6px;">Halal Bihalal &amp; Silaturahmi Anggota</h3><div style="display: flex; gap: 16px; font-size: 12px; color: #8a7a64; flex-wrap: wrap;"><span>📍 Bandung, Indonesia</span><span>🕐 19.00 WIB</span></div></div>
+        <button class="ed-btn ed-btn-o" style="background: none; color: #7a1f1f; border: 1.5px solid #b88a2e; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 10px 20px; border-radius: 7px; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s;">Daftar</button>
+      </div>
+      <div class="ev-row will-reveal" style="display: flex; align-items: center; gap: 22px; background: #fffdf8; border: 1px solid #e3d6c0; border-radius: 12px; padding: 20px 24px;">
+        <div style="flex: 0 0 66px; height: 72px; background: #f3e7d4; border: 1px solid #e3d6c0; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;"><span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; line-height: 1; color: #7a1f1f;">14</span><span style="font-size: 9.5px; letter-spacing: 1.5px; color: #b88a2e; font-weight: 700;">JUL</span></div>
+        <div style="flex: 1; min-width: 200px;"><span style="font-size: 10px; letter-spacing: 1px; font-weight: 700; color: #586b78;">SEMINAR</span><h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 22px; color: #2c0a0a; margin: 3px 0 6px;">Seminar Manajemen Risiko Umrah</h3><div style="display: flex; gap: 16px; font-size: 12px; color: #8a7a64; flex-wrap: wrap;"><span>📍 Online Event</span><span>🕐 14.00 WIB</span></div></div>
+        <button class="ed-btn ed-btn-o" style="background: none; color: #7a1f1f; border: 1.5px solid #b88a2e; font-family: inherit; font-weight: 600; font-size: 12.5px; padding: 10px 20px; border-radius: 7px; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s;">Daftar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA host event -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 40px 28px 0;">
+    <div style="position: relative; overflow: hidden; border-radius: 14px; background: radial-gradient(120% 140% at 0% 0%, #5a1818, #350f0f 55%, #2c0a0a); padding: 36px; text-align: center;">
+      <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .07; pointer-events: none;"><rect width="100%" height="100%" fill="url(#girihPat)"></rect></svg>
+      <div style="position: relative;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 30px; color: #f7eeda; margin: 0;">Punya Agenda untuk Dipublikasikan?</h3>
+        <p style="font-size: 14px; color: #c2a989; margin: 10px auto 20px; max-width: 540px; line-height: 1.6;">Anggota ASPHIRASI dapat mengajukan kegiatan untuk ditampilkan pada kalender resmi asosiasi.</p>
+        <button class="ed-btn" style="background: linear-gradient(180deg,#d8ad4a,#bf8d2c); color: #2c0a0a; border: none; font-family: inherit; font-weight: 700; font-size: 13.5px; padding: 13px 28px; border-radius: 8px; cursor: pointer;">Ajukan Agenda</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer style="position: relative; background: linear-gradient(180deg, #260909 0%, #120303 100%); border-top: 3px solid #b88a2e; overflow: hidden; margin-top: 48px;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .05; pointer-events: none;"><rect width="100%" height="100%" fill="url(#girihPat)"></rect></svg>
+    <div style="position: relative; max-width: 1180px; margin: 0 auto; padding: 40px 28px; text-align: center;">
+      <div style="display: inline-flex; align-items: center; gap: 16px;">
+        <span style="width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #c79a3e);"></span>
+        <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 28px; letter-spacing: 4px; color: #f4ead2;">ASPHIRASI</div>
+        <span style="width: 120px; height: 1px; background: linear-gradient(270deg, transparent, #c79a3e);"></span>
+      </div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: #c79a3e; margin: 6px 0 18px;">Voice of the Haramain Industry</div>
+      <a href="index.html" class="ed-link" style="text-decoration: none; color: #e7c873; font-weight: 600; font-size: 13px;">← Kembali ke Beranda</a>
+      <div style="font-size: 12px; color: #8a755e; margin-top: 20px;">© 2025 ASPHIRASI Media. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  function ready(fn){
+    if (document.readyState !== 'loading') { fn(); }
+    else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+
+  function gcalUrl(ev) {
+    var p = new URLSearchParams({
+      action: 'TEMPLATE', text: ev.t, dates: ev.s + '/' + ev.e,
+      location: ev.l, details: (ev.d || '') + ' — ASPHIRASI', ctz: 'Asia/Jakarta'
+    });
+    return 'https://calendar.google.com/calendar/render?' + p.toString();
+  }
+
+  function setupCalendar() {
+    var ics = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 3v4M16 3v4M12 12v5M9.5 14.5h5"></path></svg>';
+    var feat = { t: 'Rakernas ASPHIRASI 2025', s: '20250515T090000', e: '20250515T120000', l: 'Jakarta Convention Center, Jakarta', d: 'Rapat Kerja Nasional ASPHIRASI' };
+    var fb = document.getElementById('feat-cal');
+    if (fb) fb.addEventListener('click', function () { window.open(gcalUrl(feat), '_blank', 'noopener'); });
+    var events = [
+      { t: 'Webinar Visa Umrah Terbaru', s: '20250522T130000', e: '20250522T150000', l: 'Online Event', d: 'Webinar ASPHIRASI' },
+      { t: 'Pelatihan Tour Leader Profesional', s: '20250605T080000', e: '20250605T120000', l: 'Surabaya, Indonesia', d: 'Pelatihan ASPHIRASI' },
+      { t: 'Business Matching Travel & Maskapai', s: '20250618T100000', e: '20250618T130000', l: 'Jakarta, Indonesia', d: 'Expo ASPHIRASI' },
+      { t: 'Halal Bihalal & Silaturahmi Anggota', s: '20250702T190000', e: '20250702T210000', l: 'Bandung, Indonesia', d: 'Gathering ASPHIRASI' },
+      { t: 'Seminar Manajemen Risiko Umrah', s: '20250714T140000', e: '20250714T160000', l: 'Online Event', d: 'Seminar ASPHIRASI' }
+    ];
+    document.querySelectorAll('.ev-row').forEach(function (row, i) {
+      var ev = events[i]; if (!ev) return;
+      var btn = row.querySelector('button'); if (!btn) return;
+      var a = document.createElement('a');
+      a.href = gcalUrl(ev); a.target = '_blank'; a.rel = 'noopener';
+      a.title = 'Tambah ke Google Calendar'; a.innerHTML = ics;
+      a.style.cssText = 'flex:0 0 auto; display:flex; align-items:center; justify-content:center; width:44px; height:40px; border-radius:7px; background:#fffdf8; border:1.5px solid #b88a2e; color:#7a1f1f; text-decoration:none; transition:background .2s ease, color .2s ease;';
+      a.addEventListener('mouseenter', function () { a.style.background = '#2c0a0a'; a.style.color = '#e7c873'; });
+      a.addEventListener('mouseleave', function () { a.style.background = '#fffdf8'; a.style.color = '#7a1f1f'; });
+      btn.parentNode.insertBefore(a, btn);
+    });
+  }
+
+  ready(function () {
+    setupCalendar();
+    if (!('IntersectionObserver' in window)) return;
+    var els = Array.prototype.slice.call(document.querySelectorAll('.will-reveal'));
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); e.target.classList.add('in'); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  });
+})();
+</script>
+</body>
+</html>
