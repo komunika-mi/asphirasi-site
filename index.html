@@ -62,7 +62,10 @@
     .mh-row-home > span{ display: none !important; }
     .mh-word-home{ font-size: 34px !important; letter-spacing: 2px !important; }
     .ed-mast-nav{ gap: 12px 16px !important; }
-    .foot-grid{ grid-template-columns: 1fr 1fr !important; }
+    /* footer: single column so the long address/email never clips */
+    .foot-grid{ grid-template-columns: 1fr !important; gap: 26px !important; }
+    .foot-grid > div{ min-width: 0; }
+    .foot-grid a, .foot-grid div{ overflow-wrap: anywhere; }
     /* stack cramped card grids on phones for readability */
     .ed-4{ grid-template-columns: 1fr !important; }
     .ed-hero{ gap: 28px !important; }
